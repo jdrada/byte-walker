@@ -1,0 +1,18 @@
+{
+  "name": "byte-walker",
+  "version": "1.0.0",
+  "description": "Tiny Web Crawler",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc && node ./dist/index.js",
+    "test": "jest"
+  },
+  "author": "Juan Drada [github.com/jdrada]",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/preset-env": "^7.23.3",
+    "@babel/preset-typescript": "^7.23.3",
+    "@faker-js/faker": "^8.3.1",
+    "jest": "^29.7.0"
+  }
+}
