@@ -1,3 +1,13 @@
+/**
+ * Normalizes a URL by removing the trailing slash from the pathname if it exists.
+ * This function constructs a URL object from the given string and then processes
+ * the pathname to ensure it does not end with a slash. It then returns a string
+ * combining the host and the processed pathname.
+ *
+ * @param {string} url - The URL to be normalized.
+ * @returns {string} The normalized URL, combining the host and the pathname without a trailing slash.
+ * @throws {Error} Throws an error if the provided string is not a valid URL.
+ */
 export const normalizeURL = (url: string): string => {
   try {
     const urlObject = new URL(url);
