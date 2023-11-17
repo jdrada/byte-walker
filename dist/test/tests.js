@@ -1,9 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const globals_1 = require("@jest/globals");
-const getURLsfromHTML_1 = require("../lib/getURLsfromHTML");
 const faker_1 = require("@faker-js/faker");
 const normalizeURL_1 = require("../lib/normalizeURL");
+const getURLsFromHTML_1 = require("../lib/getURLsFromHTML");
 (0, globals_1.describe)("normalizeURL should return the url host", () => {
     const mockURLs = [
         "https://host.test/path/",
@@ -30,7 +30,7 @@ const normalizeURL_1 = require("../lib/normalizeURL");
             '<html><body><a href="/path"><span>Go to</span></a></body></html>',
         ];
         for (const html of mockedHTML) {
-            (0, getURLsfromHTML_1.getURLsFromHTML)(html, "https://host.test.dev");
+            (0, getURLsFromHTML_1.getURLsFromHTML)(html, "https://host.test.dev");
         }
     });
 });

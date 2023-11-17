@@ -2,7 +2,7 @@ import { describe, expect, test } from "@jest/globals";
 
 import { faker } from "@faker-js/faker";
 import { normalizeURL } from "../lib/normalizeURL";
-import { getURLsFromHTML } from "../lib/getURLsfromHTML";
+import { getURLsFromHTML } from "../lib/getURLsFromHTML";
 
 describe("normalizeURL should return the url host", () => {
   const mockURLs = [

@@ -12,16 +12,27 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const node_process_1 = require("node:process");
 const crawl_1 = require("./lib/crawl");
 const report_1 = require("./lib/report");
+/**
+ * The main function of the web crawling application.
+ * It expects a single command-line argument: the base URL to start crawling from.
+ * The function initiates the crawling process and then generates a report
+ * based on the crawled pages.
+ */
 function main() {
     return __awaiter(this, void 0, void 0, function* () {
-        if (node_process_1.argv.length < 3)
+        // Validate command-line arguments.
+        if (node_process_1.argv.length < 3) {
             throw new Error("No website provided.");
-        if (node_process_1.argv.length > 3)
+        }
+        if (node_process_1.argv.length > 3) {
             throw new Error("Too many arguments provided.");
+        }
         const baseURL = node_process_1.argv[2];
         console.log(`----- Starting crawl of: ${baseURL} -----`);
+        // Start the web crawling process.
         const crawledPages = (0, crawl_1.crawlPage)(baseURL);
-        (0, report_1.printReport)(yield crawledPages);
+        // Generate and print the report.
+        (0, report_1.printReport)(yield crawledPages, baseURL);
     });
 }
 main();
