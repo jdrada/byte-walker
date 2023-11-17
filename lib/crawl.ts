@@ -1,6 +1,6 @@
 import fetch from "node-fetch";
 import { normalizeURL } from "./normalizeURL";
-import { getURLsFromHTML } from "./getURLsFromHTML";
+import { getURLsFromHTML } from "./getURLsfromHTML";
 
 type PageObjectType = Record<string, number>;
 
