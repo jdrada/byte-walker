@@ -23,9 +23,9 @@ const printReport = (pages, baseURL) => {
         // Sort the pages by the number of encounters.
         const sortedPages = Object.entries(pages).sort((a, b) => b[1] - a[1]);
         // Format the sorted results into a human-readable string.
-        let reportContent = `Page Visits Report for ${baseURL}\n\n`;
+        let reportContent = `Crawl Report for ${baseURL}\n\n`;
         sortedPages.forEach(([url, count]) => {
-            reportContent += `URL: ${url}, Visits: ${count}\n`;
+            reportContent += `Found ${count} internal links to ${url}\n`;
         });
         // Create a safe filename from the base URL.
         const safeBaseURL = baseURL.replace(/[^a-z0-9]/gi, "_").toLowerCase();
